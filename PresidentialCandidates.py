@@ -1,8 +1,11 @@
 
 def normalize_speech(speech):
-    arr = speech.lower().replace(",", " ").replace(".", " ").replace("\n", " ").replace("  ", " ").replace("[", " ").replace("]", " ").replace(":", " ").split(" ");
+    arr = speech.lower().replace(",", " ").replace(".", " ").replace("\n", " ").replace("  ", " ").replace("[", " ").replace("]", " ").replace(":", " ").replace("---", " ").split(" ");
     for word in arr:
-        print(word);
+        """print(word);"""
+        if (word == ""):
+            print(word + "TRAIDOR");
+            word = "atutus";
     print(arr);
 
 
