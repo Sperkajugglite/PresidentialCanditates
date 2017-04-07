@@ -1,7 +1,10 @@
 
 def normalize_speech(speech):
-    speech = speech.lower().replace(",", " ").replace(".", " ").replace("\n", " ").replace("  ", " ").replace("[", " ").replace("]", " ").replace(":", " ").split(" ");
-    print(speech);
+    arr = speech.lower().replace(",", " ").replace(".", " ").replace("\n", " ").replace("  ", " ").replace("[", " ").replace("]", " ").replace(":", " ").split(" ");
+    for word in arr:
+        print(word);
+    print(arr);
+
 
 
 
