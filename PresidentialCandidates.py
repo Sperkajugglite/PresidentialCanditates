@@ -9,9 +9,15 @@ def count_words(arr):
     word_dict = {};
     for word in arr:
         word_dict[word] = arr.count(word);
+    """return (word_dict);"""
+    for word in sorted(word_dict.items()):
+        print (word);
 
-    print(word_dict);
 
+
+def print_word_dict(word_dict):
+    for word in word_dict.keys():
+        print (word, ": ", word_dict[word]);
 
 
 count_words(normalize_speech("""Tonight, as we mark the conclusion of our celebration of Black History Month, we are reminded of our Nation's path toward civil rights and the work that still remains. Recent threats targeting Jewish Community Centers and vandalism of Jewish cemeteries, as well as last week's shooting in Kansas City, remind us that while we may be a Nation divided on policies, we are a country that stands united in condemning hate and evil in all its forms.
