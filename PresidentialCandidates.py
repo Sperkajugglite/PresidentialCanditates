@@ -6,17 +6,16 @@ def normalize_speech(speech):
 
 
 def count_words(arr):
-    print (arr);
-    word_list = [];
+    word_dict = {};
     for word in arr:
-        word_list.append([word, arr.count(word)]);
-    print(word_list);
-    return word_list;
+        word_dict[word] = arr.count(word);
+    print (word_dict) ;
+    return word_dict;
 
-def print_word_dict(word_list):
-    print(word_list);
-    for pair in word_list:
-        print (pair[0], ": ", pair[1]);
+def print_word_dict(word_dict):
+    for key in word_dict.keys():
+        print(key, ": ", word_dict[key]);
+    
 
 
 print_word_dict(count_words(normalize_speech("""Tonight, as we mark the conclusion of our celebration of Black History Month, we are reminded of our Nation's path toward civil rights and the work that still remains. Recent threats targeting Jewish Community Centers and vandalism of Jewish cemeteries, as well as last week's shooting in Kansas City, remind us that while we may be a Nation divided on policies, we are a country that stands united in condemning hate and evil in all its forms.
