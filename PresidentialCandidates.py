@@ -9,7 +9,7 @@ def count_words(arr):
     print (arr);
     word_list = [];
     for word in arr:
-        word_list.append((word, arr.count(word)));
+        word_list.append([word, arr.count(word)]);
     print(word_list);
     return word_list;
 
